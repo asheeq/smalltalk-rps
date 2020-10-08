@@ -1,0 +1,37 @@
+| li player computer |
+ li := #(rock  scissors  paper ).
+ player := FillInTheBlank request: 'Enter rock, paper or scissors' .
+ computer := li atRandom.
+
+Transcript show: ('Player: ',player); cr.
+Transcript show: ('Computer: ',computer); cr.
+
+player = 'rock' 
+	ifTrue: [
+		computer = 'paper' 
+			ifTrue: [Transcript show: 'Computer wins.' ; cr].
+		computer = 'scissors' 
+			ifTrue: [Transcript show: 'Player wins.' ; cr].
+		computer = 'rock' 
+			ifTrue: [Transcript show: 'Draw.' ; cr].
+	].
+
+player = 'paper' 
+	ifTrue: [
+		computer = 'rock' 
+			ifTrue: [Transcript show: 'Player wins.' ; cr].
+		computer = 'scissors' 
+			ifTrue: [Transcript show: 'Computer wins.' ; cr].
+		computer = 'paper' 
+			ifTrue: [Transcript show: 'Draw.' ; cr].
+	].
+
+player = 'scissors'
+	ifTrue: [
+		computer = 'rock' 
+			ifTrue: [Transcript show: 'Computer wins.' ; cr].
+		computer = 'paper' 
+			ifTrue: [Transcript show: 'Player wins.' ; cr].
+		computer = 'scissors' 
+			ifTrue: [Transcript show: 'Draw.' ; cr].
+	].
